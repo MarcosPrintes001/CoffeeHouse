@@ -52,6 +52,8 @@ class _LoginPageState extends State<LoginPage> {
       //wrong email or password
       if (e.code == "INVALID_LOGIN_CREDENTIALS") {
         errorMessage("Email ou Senha Incorretos, revise e tente novamente");
+      } else {
+        errorMessage("ERROR: ${e.code}");
       }
     }
   }
@@ -79,9 +81,13 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 const SizedBox(height: 30),
                 // logo
-                const Icon(
-                  Icons.lock,
-                  size: 100,
+                const Image(
+                  image: ResizeImage(
+                      AssetImage(
+                        ('assets/coffees/coffee-shop.png'),
+                      ),
+                      height: 200,
+                      width: 200),
                 ),
                 const SizedBox(
                   height: 20,

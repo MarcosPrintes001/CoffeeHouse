@@ -86,9 +86,13 @@ class _RegisterPageState extends State<RegisterPage> {
               children: [
                 const SizedBox(height: 20),
                 // logo
-                const Icon(
-                  Icons.lock,
-                  size: 90,
+                const Image(
+                  image: ResizeImage(
+                      AssetImage(
+                        ('assets/coffees/coffee-shop.png'),
+                      ),
+                      height: 200,
+                      width: 200),
                 ),
 
                 // welcome back, you've been missed!
@@ -178,51 +182,51 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(height: 20),
 
                 // or continue with
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text(
-                          'Or continue with',
-                          style: TextStyle(color: Colors.grey[700]),
-                        ),
-                      ),
-                      Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                //   child: Row(
+                //     children: [
+                //       Expanded(
+                //         child: Divider(
+                //           thickness: 0.5,
+                //           color: Colors.grey[400],
+                //         ),
+                //       ),
+                //       Padding(
+                //         padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                //         child: Text(
+                //           'Or continue with',
+                //           style: TextStyle(color: Colors.grey[700]),
+                //         ),
+                //       ),
+                //       Expanded(
+                //         child: Divider(
+                //           thickness: 0.5,
+                //           color: Colors.grey[400],
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
 
-                const SizedBox(height: 30),
+                // const SizedBox(height: 30),
 
                 // google + apple sign in buttons
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      // google button
-                      SquareTile(imagePath: 'assets/images/google.png'),
+                // Padding(
+                //   padding: const EdgeInsets.only(bottom: 10),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     children: const [
+                //       // google button
+                //       SquareTile(imagePath: 'assets/images/google.png'),
 
-                      // SizedBox(width: 25),
+                //       // SizedBox(width: 25),
 
-                      // // apple button
-                      // SquareTile(imagePath: 'assets/images/apple.png')
-                    ],
-                  ),
-                ),
+                //       // // apple button
+                //       // SquareTile(imagePath: 'assets/images/apple.png')
+                //     ],
+                //   ),
+                // ),
               ],
             ),
           ),
