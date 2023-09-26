@@ -12,7 +12,12 @@
           "package_name": "com.example.coffee_house"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "203655837390-7osv324tl84gef8hs8ra8pub5scbj27f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCFHR4HNdjjn8FVb1Hr9eRKbDjLIm9KfIs"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203655837390-7osv324tl84gef8hs8ra8pub5scbj27f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "203655837390-fovu2onknod1s0ev63h4n9b39vajh98c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.coffeeHouse"
+              }
+            }
+          ]
         }
       }
     }

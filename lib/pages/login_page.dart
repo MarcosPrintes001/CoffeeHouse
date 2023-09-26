@@ -1,10 +1,10 @@
 // ignore_for_file: use_build_context_synchronously
 
+import 'package:coffee_house/pages/forgotPassword.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:coffee_house/components/my_button.dart';
 import 'package:coffee_house/components/my_textfield.dart';
-import 'package:coffee_house/components/square_tile.dart';
 
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
@@ -20,6 +20,13 @@ class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
 
   final passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   // sign user in method
   void signUserIn() async {
@@ -44,17 +51,17 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.pop(context);
       //wrong email or password
       if (e.code == "INVALID_LOGIN_CREDENTIALS") {
-        emailOrPasswordWrong();
+        errorMessage("Email ou Senha Incorretos, revise e tente novamente");
       }
     }
   }
 
-  void emailOrPasswordWrong() {
+  void errorMessage(String message) {
     showDialog(
       context: context,
       builder: (context) {
-        return const AlertDialog(
-          title: Text("Email ou Senha Incorretos, revise e tente novamente"),
+        return AlertDialog(
+          title: Text(message),
         );
       },
     );
@@ -71,7 +78,6 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(height: 30),
-
                 // logo
                 const Icon(
                   Icons.lock,
@@ -115,9 +121,18 @@ class _LoginPageState extends State<LoginPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        'Forgot Password?',
-                        style: TextStyle(color: Colors.grey[600]),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              return const ForgotPasswordPage();
+                            },
+                          ));
+                        },
+                        child: Text(
+                          'Forgot Password?',
+                          style: TextStyle(color: Colors.grey[600]),
+                        ),
                       ),
                     ],
                   ),
@@ -160,54 +175,54 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
 
-                const SizedBox(height: 20),
+                // const SizedBox(height: 20),
 
                 // or continue with
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                        child: Text(
-                          'Or continue with',
-                          style: TextStyle(color: Colors.grey[700]),
-                        ),
-                      ),
-                      Expanded(
-                        child: Divider(
-                          thickness: 0.5,
-                          color: Colors.grey[400],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                //   child: Row(
+                //     children: [
+                //       Expanded(
+                //         child: Divider(
+                //           thickness: 0.5,
+                //           color: Colors.grey[400],
+                //         ),
+                //       ),
+                //       Padding(
+                //         padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                //         child: Text(
+                //           'Or continue with',
+                //           style: TextStyle(color: Colors.grey[700]),
+                //         ),
+                //       ),
+                //       Expanded(
+                //         child: Divider(
+                //           thickness: 0.5,
+                //           color: Colors.grey[400],
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
 
-                const SizedBox(height: 30),
+                // const SizedBox(height: 30),
 
-                // google + apple sign in buttons
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      // google button
-                      SquareTile(imagePath: 'assets/images/google.png'),
+                // // google + apple sign in buttons
+                // Padding(
+                //   padding: const EdgeInsets.only(bottom: 10.0),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     children: const [
+                //       // google button
+                //       SquareTile(imagePath: 'assets/images/google.png'),
 
-                      // SizedBox(width: 25),
+                //       // SizedBox(width: 25),
 
-                      // // apple button
-                      // SquareTile(imagePath: 'assets/images/apple.png')
-                    ],
-                  ),
-                ),
+                //       // // apple button
+                //       // SquareTile(imagePath: 'assets/images/apple.png')
+                //     ],
+                //   ),
+                // ),
               ],
             ),
           ),

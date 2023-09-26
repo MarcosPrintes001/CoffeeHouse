@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,6 +43,15 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyD7HvW3JBkpHTUipM-bv3ZdHKOaymlKCDE',
+    appId: '1:203655837390:web:78d0ff3f2d6d651c2f429f',
+    messagingSenderId: '203655837390',
+    projectId: 'coffeehouse-cbb97',
+    authDomain: 'coffeehouse-cbb97.firebaseapp.com',
+    storageBucket: 'coffeehouse-cbb97.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCFHR4HNdjjn8FVb1Hr9eRKbDjLIm9KfIs',
     appId: '1:203655837390:android:843e8ecaeb9be8fc2f429f',
@@ -63,6 +66,17 @@ class DefaultFirebaseOptions {
     messagingSenderId: '203655837390',
     projectId: 'coffeehouse-cbb97',
     storageBucket: 'coffeehouse-cbb97.appspot.com',
+    iosClientId: '203655837390-fovu2onknod1s0ev63h4n9b39vajh98c.apps.googleusercontent.com',
+    iosBundleId: 'com.example.coffeeHouse',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCKFBmo9FzQpeOV3LCcrHT0wIH4er0KChk',
+    appId: '1:203655837390:ios:6fc0e742297601332f429f',
+    messagingSenderId: '203655837390',
+    projectId: 'coffeehouse-cbb97',
+    storageBucket: 'coffeehouse-cbb97.appspot.com',
+    iosClientId: '203655837390-fovu2onknod1s0ev63h4n9b39vajh98c.apps.googleusercontent.com',
     iosBundleId: 'com.example.coffeeHouse',
   );
 }

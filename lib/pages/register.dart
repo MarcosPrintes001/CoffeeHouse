@@ -41,7 +41,6 @@ class _RegisterPageState extends State<RegisterPage> {
           email: emailController.text,
           password: passwordController.text,
         );
-
         //pop de loading circle
         Navigator.pop(context);
       } else {
@@ -52,9 +51,14 @@ class _RegisterPageState extends State<RegisterPage> {
       }
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
-      //wrong email or password
+
+      //invalid  email
       if (e.code == "invalid-email") {
         showErrorMessage("Email invalido, revise e tente novamente");
+      }
+      //email already in use
+      else if (e.code == "email-already-in-use") {
+        showErrorMessage("email already in use");
       }
     }
   }

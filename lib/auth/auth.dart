@@ -1,7 +1,7 @@
 import 'package:coffee_house/pages/home.dart';
-import 'package:coffee_house/pages/login_or_register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:coffee_house/auth/login_or_register.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
