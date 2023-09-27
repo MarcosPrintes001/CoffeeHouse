@@ -34,7 +34,7 @@ class CoffeeShop extends ChangeNotifier {
   ];
 
   //user cart
-  List<Coffee> _userCart = [];
+  final List<Coffee> _userCart = [];
 
   //get coffee list
   List<Coffee> get coffeeShop => _shop;
@@ -52,5 +52,19 @@ class CoffeeShop extends ChangeNotifier {
   void removeItemFromCart(Coffee coffee) {
     _userCart.remove(coffee);
     notifyListeners();
+  }
+
+  // Clear cart
+  void clearCart() {
+    _userCart.clear();
+    notifyListeners();
+  }
+
+  //verify if te cart are empty
+  cartEmpty() {
+    if (_userCart.isEmpty) {
+      return true;
+    }
+    return false;
   }
 }

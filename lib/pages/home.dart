@@ -25,9 +25,9 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     //shop page
-    ShopPage(),
+    const ShopPage(),
     //car page
-    CartPage(),
+    const CartPage(),
   ];
 
   void signUserOut() {
@@ -37,15 +37,37 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              decoration: const BoxDecoration(color: Colors.brown),
+              currentAccountPicture: const Image(
+                image: AssetImage(
+                  ('assets/coffees/coffee-shop.png'),
+                ),
+              ),
+              accountName: const Text('Wellcome'),
+              accountEmail: Text(user.email!.toString()),
+            ),
+            Expanded(
+              child: Container(),
+            ),
+            ListTile(
+              title: Container(
+                padding: const EdgeInsets.all(15),
+                color: Colors.grey[600],
+                child: const Icon(Icons.logout),
+              ),
+              onTap: signUserOut,
+            ),
+          ],
+        ),
+      ),
+
       backgroundColor: backGroundColor,
       appBar: AppBar(
         backgroundColor: Colors.brown,
-        actions: [
-          IconButton(
-            onPressed: signUserOut,
-            icon: const Icon(Icons.logout),
-          ),
-        ],
       ),
       bottomNavigationBar: MyBottomNavBar(
         onTabChange: (index) => navigateBottomBar(index),

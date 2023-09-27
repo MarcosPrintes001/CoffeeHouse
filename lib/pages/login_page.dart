@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.pop(context);
       //wrong email or password
       if (e.code == "INVALID_LOGIN_CREDENTIALS") {
-        errorMessage("Email ou Senha Incorretos, revise e tente novamente");
+        errorMessage("Email or password wrong, review and try again");
       } else {
         errorMessage("ERROR: ${e.code}");
       }

@@ -17,12 +17,71 @@ class _CartPageState extends State<CartPage> {
   }
 
   //pay buttom pressed
-  void payNow() {
-    /*
-    
-        USAR PROVIDER DE PAGAMENTO
+  payNow() {
+    bool cart = Provider.of<CoffeeShop>(context, listen: false).cartEmpty();
+    if (cart) {
+      //não tem itens no carrinho
+      return showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+          actionsAlignment: MainAxisAlignment.center,
+          title: const Text(
+            'NO ITEMS IN YOUR CART',
+            textAlign: TextAlign.center,
+          ),
+          content: const Text("Add items to your cart before proceeding"),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () => Navigator.pop(context, 'OK'),
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+    } else {
+      //Há itens no carrinho
+      showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => AlertDialog(
+          actionsAlignment: MainAxisAlignment.center,
+          title: Row(
+            children: const [
+              Image(
+                image: ResizeImage(
+                  AssetImage(
+                    ('assets/coffees/coffee-shop.png'),
+                  ),
+                  height: 30,
+                  width: 30,
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text('Successfully'),
+            ],
+          ),
+          content: const Text(
+            'Your purchase was successful thank you for your preference',
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context, 'OK');
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        ),
+      );
+      Provider.of<CoffeeShop>(context, listen: false).clearCart();
+    }
 
-     */
+    /*
+            
+      USAR PROVIDER DE PAGAMENTO
+
+    */
   }
 
   @override
@@ -34,7 +93,13 @@ class _CartPageState extends State<CartPage> {
           child: Column(
             children: [
               //heading
-              const Text("Your Cart"),
+              const Text(
+                "Your Cart",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontFamily: AutofillHints.familyName,
+                ),
+              ),
 
               //lis of coffees
               Expanded(

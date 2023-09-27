@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:coffee_house/components/my_button.dart';
 import 'package:coffee_house/components/my_textfield.dart';
-import 'package:coffee_house/components/square_tile.dart';
 
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
@@ -54,11 +53,13 @@ class _RegisterPageState extends State<RegisterPage> {
 
       //invalid  email
       if (e.code == "invalid-email") {
-        showErrorMessage("Email invalido, revise e tente novamente");
+        showErrorMessage("invalid email, review and try again");
       }
       //email already in use
       else if (e.code == "email-already-in-use") {
         showErrorMessage("email already in use");
+      } else {
+        showErrorMessage(e.code.toString());
       }
     }
   }
