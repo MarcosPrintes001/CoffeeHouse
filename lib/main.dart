@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => CoffeeShop(),
       builder: (context, child) => const MaterialApp(
+        title: "Coffe\nHouse",
         debugShowCheckedModeBanner: false,
         home: AuthPage(),
       ),
