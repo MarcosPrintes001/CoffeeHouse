@@ -1,16 +1,36 @@
-# coffee_house
+# CoffeeHouse
 
-A new Flutter project.
+CoffeeHouse é um aplicativo de amostra para demonstrar o uso do Flutter na criação de uma interface de usuário de uma loja de café fictícia.
 
-## Getting Started
+## Visão Geral
 
-This project is a starting point for a Flutter application.
+O aplicativo CoffeeHouse foi desenvolvido como parte de um projeto de aprendizado de Flutter. Ele oferece uma interface simples para navegar por uma lista de produtos de café e adicionar itens a um carrinho de compras simulado.
 
-A few resources to get you started if this is your first Flutter project:
+## Funcionalidades
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Exibe uma lista de produtos de café.
+- Permite ao usuário adicionar produtos ao carrinho de compras.
+- Permite ao usuário visualizar e limpar o carrinho de compras.
+- Fornece uma interface amigável e intuitiva.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Capturas de Tela
+
+![Tela Principal](screenshots/home.png)
+![Carrinho de Compras](screenshots/cart.png)
+![Tela Principal](screenshots/home.png)
+![Carrinho de Compras](screenshots/cart.png)
+![Tela Principal](screenshots/home.png)
+![Carrinho de Compras](screenshots/cart.png)
+
+## Pré-requisitos
+
+- Flutter SDK instalado (https://flutter.dev/docs/get-started/install)
+- Um dispositivo Android ou iOS ou um emulador configurado
+
+## Como Executar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/MarcosPrintes001/CoffeeHouse.git
+```
