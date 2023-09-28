@@ -15,12 +15,11 @@ O aplicativo CoffeeHouse foi desenvolvido como parte de um projeto de aprendizad
 
 ## Capturas de Tela
 
+![Tela de Login](screenshots/login.png)
+![Telas de Registro](screenshots/register.png)
 ![Tela Principal](screenshots/home.png)
 ![Carrinho de Compras](screenshots/cart.png)
-![Tela Principal](screenshots/home.png)
-![Carrinho de Compras](screenshots/cart.png)
-![Tela Principal](screenshots/home.png)
-![Carrinho de Compras](screenshots/cart.png)
+
 
 ## Pré-requisitos
 
@@ -30,7 +29,28 @@ O aplicativo CoffeeHouse foi desenvolvido como parte de um projeto de aprendizad
 ## Como Executar
 
 1. Clone o repositório:
-
 ```bash
 git clone https://github.com/MarcosPrintes001/CoffeeHouse.git
 ```
+
+2. Navegue até o diretório do projeto:
+```bash
+cd CoffeeHouse
+```
+
+3. Execute a aplicação:
+```bash
+flutter run
+```
+
+A aplicação será iniciada em um emulador ou dispositivo Android/iOS, dependendo da sua configuração.
+
+## Contribuição
+
+Contribuições são bem-vindas! Se você deseja melhorar este projeto ou adicionar novos recursos, sinta-se à vontade para abrir um pull request.
+
+## 📝 Licença
+
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+
+
