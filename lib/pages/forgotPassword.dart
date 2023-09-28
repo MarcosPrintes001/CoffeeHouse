@@ -29,8 +29,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
         context: context,
         builder: (context) {
           return const AlertDialog(
-            title: Text(
-                "Um e-mail foi enviado, verifique sua caixa de entrada ou spam"),
+            title: Text("A email was sended to you, verify your inbox or spam"),
           );
         },
       );
