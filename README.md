@@ -14,12 +14,15 @@ O aplicativo CoffeeHouse foi desenvolvido como parte de um projeto de aprendizad
 - Fornece uma interface amigável e intuitiva.
 
 ## Capturas de Tela
+<div style="display: flex; justify-content: center;">
+ <img src="https://github.com/MarcosPrintes001/CoffeeHouse/blob/master/screenshots/login.png" width="300">
+  <img src="https://github.com/MarcosPrintes001/CoffeeHouse/blob/master/screenshots/register.png" width="300">
+  <br/>
 
-![Tela de Login](screenshots/login.png)
-![Telas de Registro](screenshots/register.png)
-![Tela Principal](screenshots/home.png)
-![Carrinho de Compras](screenshots/cart.png)
+  <img src="https://github.com/MarcosPrintes001/CoffeeHouse/blob/master/screenshots/home.png" width="300">
+  <img src="https://github.com/MarcosPrintes001/CoffeeHouse/blob/master/screenshots/cart.png" width="300">
 
+</div>
 
 ## Pré-requisitos
 
