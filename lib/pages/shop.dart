@@ -20,7 +20,7 @@ class _ShopPageState extends State<ShopPage> {
     showDialog(
       context: context,
       builder: (context) =>
-          const AlertDialog(title: Text("Seccessfully added to cart")),
+          const AlertDialog(title: Text("Adicionado ao carrinho")),
     );
   }
 
@@ -34,7 +34,7 @@ class _ShopPageState extends State<ShopPage> {
             children: [
               //Heading message
               const Text(
-                "How Wold you like your Coffee?",
+                "Como gostaria do seu café hoje?",
                 style: TextStyle(fontSize: 20),
               ),
 

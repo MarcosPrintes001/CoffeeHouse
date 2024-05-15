@@ -26,10 +26,10 @@ class _CartPageState extends State<CartPage> {
         builder: (BuildContext context) => AlertDialog(
           actionsAlignment: MainAxisAlignment.center,
           title: const Text(
-            'NO ITEMS IN YOUR CART',
+            'SEM ITENS NO SEU CARRINHO',
             textAlign: TextAlign.center,
           ),
-          content: const Text("Add items to your cart before proceeding"),
+          content: const Text("Adicione itens ao seu carrinho para pagar"),
           actions: <Widget>[
             TextButton(
               onPressed: () => Navigator.pop(context, 'OK'),
@@ -44,8 +44,8 @@ class _CartPageState extends State<CartPage> {
         context: context,
         builder: (BuildContext context) => AlertDialog(
           actionsAlignment: MainAxisAlignment.center,
-          title: Row(
-            children: const [
+          title: const Row(
+            children: [
               Image(
                 image: ResizeImage(
                   AssetImage(
@@ -58,11 +58,13 @@ class _CartPageState extends State<CartPage> {
               SizedBox(
                 width: 10,
               ),
-              Text('Successfully'),
+              Text(
+                'Sucesso!',
+              ),
             ],
           ),
           content: const Text(
-            'Your purchase was successful thank you for your preference',
+            'Sua compra foi efetuada com sucesso, muito obrigado pela preferência!',
           ),
           actions: <Widget>[
             TextButton(
@@ -94,7 +96,7 @@ class _CartPageState extends State<CartPage> {
             children: [
               //heading
               const Text(
-                "Your Cart",
+                "Seu Carrinho",
                 style: TextStyle(
                   fontSize: 25,
                   fontFamily: AutofillHints.familyName,
@@ -131,7 +133,7 @@ class _CartPageState extends State<CartPage> {
                   ),
                   child: const Center(
                     child: Text(
-                      "Pay Now",
+                      "Pagar Agora",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

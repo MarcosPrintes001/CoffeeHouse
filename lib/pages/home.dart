@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                   ('assets/coffees/coffee-shop.png'),
                 ),
               ),
-              accountName: const Text('Wellcome'),
+              accountName: const Text('Bem-vindo(a) ao Coffee House'),
               accountEmail: Text(user.email!.toString()),
             ),
             Expanded(
@@ -74,17 +74,7 @@ class _HomePageState extends State<HomePage> {
       ),
 
       body: _pages[_selectedIndex],
-      // appBar: AppBar(
-      //   actions: [
-      //     IconButton(
-      //       onPressed: signUserOut,
-      //       icon: const Icon(Icons.logout),
-      //     ),
-      //   ],
-      // ),
-      // body: Center(
-      //   child: Text("Logged in as: ${user.email!}"),
-      // ),
+      
     );
   }
 }

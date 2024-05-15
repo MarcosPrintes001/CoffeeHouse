@@ -29,7 +29,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
         context: context,
         builder: (context) {
           return const AlertDialog(
-            title: Text("A email was sended to you, verify your inbox or spam"),
+            title: Text("Um email foi enviado para você, verifique sua caixa de entrada ou spam"),
           );
         },
       );
@@ -58,7 +58,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             const Padding(
               padding: EdgeInsets.all(30),
               child: Text(
-                "Enter with your email and we send a link to you reset your password",
+                "Adicione seu email para redefinir sua senha",
                 textAlign: TextAlign.center,
               ),
             ),
@@ -70,7 +70,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             MaterialButton(
               onPressed: passWordReset,
               color: Colors.brown,
-              child: const Text("Reset password"),
+              child: const Text("Resetar Senha"),
             ),
           ],
         ),

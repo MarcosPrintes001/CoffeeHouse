@@ -46,18 +46,18 @@ class _RegisterPageState extends State<RegisterPage> {
         //pop de loading circle
         Navigator.pop(context);
         //show error message
-        showErrorMessage("PassWord dont match");
+        showErrorMessage("As senha não coincidem!");
       }
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
 
       //invalid  email
       if (e.code == "invalid-email") {
-        showErrorMessage("invalid email, review and try again");
+        showErrorMessage("email invalido, tente novamente!");
       }
       //email already in use
       else if (e.code == "email-already-in-use") {
-        showErrorMessage("email already in use");
+        showErrorMessage("este email já está em uso, tente outro!");
       } else {
         showErrorMessage(e.code.toString());
       }
@@ -98,7 +98,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
                 // welcome back, you've been missed!
                 Text(
-                  'Lets creat an Accont for you',
+                  'Vamos criar uma conta para você!',
                   style: TextStyle(
                     color: Colors.grey[700],
                     fontSize: 16,
@@ -110,7 +110,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 // email textfield
                 MyTextField(
                   controller: emailController,
-                  hintText: 'Username',
+                  hintText: 'Nome de usuário',
                   obscureText: false,
                 ),
 
@@ -119,7 +119,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 // password textfield
                 MyTextField(
                   controller: passwordController,
-                  hintText: 'Password',
+                  hintText: 'Senha',
                   obscureText: true,
                 ),
 
@@ -128,7 +128,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 // password textfield
                 MyTextField(
                   controller: confirmPasswordController,
-                  hintText: 'Confirm Password',
+                  hintText: 'Confirme a senha',
                   obscureText: true,
                 ),
 
@@ -148,7 +148,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 // sign in button
                 MyButton(
                   onTap: signUserUp,
-                  text: 'SIGN UP',
+                  text: 'Criar Conta',
                 ),
 
                 // not a member? register now
@@ -158,7 +158,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Already have an account?',
+                        'Já possui uma conta?',
                         style: TextStyle(
                           color: Colors.grey[700],
                           fontSize: 16,
@@ -168,7 +168,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       GestureDetector(
                         onTap: widget.onTap,
                         child: const Text(
-                          'Login In',
+                          'Entrar agora!',
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,

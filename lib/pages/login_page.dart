@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.pop(context);
       //wrong email or password
       if (e.code == "INVALID_LOGIN_CREDENTIALS") {
-        errorMessage("Email or password wrong, review and try again");
+        errorMessage("Email ou senha incorretos, revise os dados e tente de novo!");
       } else {
         errorMessage("ERROR: ${e.code}");
       }
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 // welcome back, you've been missed!
                 Text(
-                  'Welcome back you\'ve been missed!',
+                  'Bem vindo novamente sentimos sua falta!',
                   style: TextStyle(
                     color: Colors.grey[700],
                     fontSize: 16,
@@ -106,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                 // email textfield
                 MyTextField(
                   controller: emailController,
-                  hintText: 'Username',
+                  hintText: 'Nome de usuário',
                   obscureText: false,
                 ),
 
@@ -115,7 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                 // password textfield
                 MyTextField(
                   controller: passwordController,
-                  hintText: 'Password',
+                  hintText: 'Senha',
                   obscureText: true,
                 ),
 
@@ -136,7 +136,7 @@ class _LoginPageState extends State<LoginPage> {
                           ));
                         },
                         child: Text(
-                          'Forgot Password?',
+                          'Esqueceu a senha?',
                           style: TextStyle(color: Colors.grey[600]),
                         ),
                       ),
@@ -151,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: MyButton(
                     onTap: signUserIn,
-                    text: 'SIGN IN',
+                    text: 'Entrar',
                   ),
                 ),
 
@@ -160,7 +160,7 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not a member?',
+                      'Não esta cadastrado ainda?',
                       style: TextStyle(
                         color: Colors.grey[700],
                         fontSize: 16,
@@ -170,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                     GestureDetector(
                       onTap: widget.onTap,
                       child: const Text(
-                        'Register now',
+                        'Registre agora',
                         style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
