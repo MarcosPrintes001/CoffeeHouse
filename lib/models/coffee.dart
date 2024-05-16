@@ -1,11 +1,15 @@
+
 class Coffee {
   final String name;
-  final String price;
+  final double price;
+  final String description;
   final String imgPath;
+  int quantity = 0;
 
-  Coffee({
+  Coffee( {
     required this.name,
     required this.price,
+    required this.description,
     required this.imgPath,
   });
 }

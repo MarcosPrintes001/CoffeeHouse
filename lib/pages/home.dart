@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
               decoration: const BoxDecoration(color: Colors.brown),
               currentAccountPicture: const Image(
                 image: AssetImage(
-                  ('assets/coffees/coffee-shop.png'),
+                  ('assets/banners/coffee-shop.png'),
                 ),
               ),
               accountName: const Text('Bem-vindo(a) ao Coffee House'),

@@ -86,6 +86,15 @@ class _CartPageState extends State<CartPage> {
     */
   }
 
+  double CalcTotal(userCart) {
+    double total = 0;
+    for (Coffee coffee
+        in Provider.of<CoffeeShop>(context, listen: false).userCart) {
+      total += coffee.price;
+    }
+    return total;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<CoffeeShop>(
@@ -119,6 +128,14 @@ class _CartPageState extends State<CartPage> {
                     );
                   },
                 ),
+              ),
+
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Total: ${CalcTotal(value.userCart)}0",
+                      style: const TextStyle(fontSize: 20)),
+                ],
               ),
 
               //Pay Buttom

@@ -6,31 +6,19 @@ class CoffeeShop extends ChangeNotifier {
   final List<Coffee> _shop = [
     //black coffee
     Coffee(
-      name: "Long Black",
-      price: "2,00",
-      imgPath: "assets/coffees/coffee.png",
+      name: "Latte",
+      price: 8.00,
+      description: "Espresso e leite vaporizado. Sabor do café mais suave. 380ml",
+      imgPath: "assets/coffee/cafe-quente/latte.png",
     ),
 
-    //expresso
-    Coffee(
-      name: "Expresso",
-      price: "3,00",
-      imgPath: "assets/coffees/espresso.png",
+     Coffee(
+      name: "Americano",
+      price: 6.10,
+      description: "Espresso duplo suavizado com água. 380ml",
+      imgPath: "assets/coffee/cafe-quente/americano.png",
     ),
 
-    //matchiato
-    Coffee(
-      name: "Matchiato",
-      price: "5,00",
-      imgPath: "assets/coffees/matchiato.png",
-    ),
-
-    //coffee pye
-    Coffee(
-      name: "Coffee Pye",
-      price: "10,00",
-      imgPath: "assets/coffees/coffee_pye.png",
-    ),
   ];
 
   //user cart

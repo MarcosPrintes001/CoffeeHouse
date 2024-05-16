@@ -90,7 +90,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 const Image(
                   image: ResizeImage(
                       AssetImage(
-                        ('assets/coffees/coffee-shop.png'),
+                        ('assets/banners/coffee-shop.png'),
                       ),
                       height: 200,
                       width: 200),

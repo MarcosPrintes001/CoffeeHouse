@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                 const Image(
                   image: ResizeImage(
                       AssetImage(
-                        ('assets/coffees/coffee-shop.png'),
+                        ('assets/banners/coffee-shop.png'),
                       ),
                       height: 200,
                       width: 200),

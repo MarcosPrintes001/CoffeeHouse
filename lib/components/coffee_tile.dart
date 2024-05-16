@@ -25,8 +25,19 @@ class CoffeeTile extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
       child: ListTile(
         title: Text(coffee.name),
-        subtitle: Text(coffee.price),
-        leading: Image.asset(coffee.imgPath),
+        subtitle: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 10),
+            Text(coffee.description),
+            Text("${coffee.price}0 R\$ "),
+          ],
+        ),
+        leading: Image.asset(
+                  coffee.imgPath,
+                  fit: BoxFit.cover,
+                ),
         trailing: IconButton(
           onPressed: onPressed,
           icon: icon,
