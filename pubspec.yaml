@@ -22,5 +22,20 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-  - assets/coffee/cafe-quente/
   - assets/banners/
+  - assets/coffee/cafe-quente/
+  - assets/coffee/cafe-gelado/
+  - assets/coffee/cha-quente/
+  - assets/coffee/cha-gelado/
+  - assets/coffee/paes/
+  - assets/coffee/suco/
+  - assets/coffee/doces/
+  - assets/coffee/milk-shakes/
+  - assets/coffee/bebidas-veganas/
+  - assets/coffee/agua/
+
+
+
+
+
+

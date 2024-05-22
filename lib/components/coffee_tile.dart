@@ -18,26 +18,39 @@ class CoffeeTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey[200],
+        color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
       margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
       child: ListTile(
         title: Text(coffee.name),
         subtitle: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
-            Text(coffee.description),
+            Row(
+              children: [
+                Flexible(
+                  child: Text(
+                    coffee.description,
+                    overflow: TextOverflow.clip,
+                  ),
+                ),
+              ],
+            ),
             Text("${coffee.price}0 R\$ "),
           ],
         ),
-        leading: Image.asset(
-                  coffee.imgPath,
-                  fit: BoxFit.cover,
-                ),
+        leading: SizedBox(
+          width: 100, // Defina a largura desejada
+          height: 100, // Defina a altura desejada
+          child: FittedBox(
+            fit: BoxFit.cover,
+            child: Image.asset(
+              coffee.imgPath,
+            ),
+          ),
+        ),
         trailing: IconButton(
           onPressed: onPressed,
           icon: icon,

@@ -49,7 +49,7 @@ class _CartPageState extends State<CartPage> {
               Image(
                 image: ResizeImage(
                   AssetImage(
-                    ('assets/coffees/coffee-shop.png'),
+                    ('assets/banners/coffee-shop.png'),
                   ),
                   height: 30,
                   width: 30,
@@ -86,7 +86,7 @@ class _CartPageState extends State<CartPage> {
     */
   }
 
-  double CalcTotal(userCart) {
+  double calcTotal(userCart) {
     double total = 0;
     for (Coffee coffee
         in Provider.of<CoffeeShop>(context, listen: false).userCart) {
@@ -133,7 +133,7 @@ class _CartPageState extends State<CartPage> {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Total: ${CalcTotal(value.userCart)}0",
+                  Text("Total: ${calcTotal(value.userCart)}0",
                       style: const TextStyle(fontSize: 20)),
                 ],
               ),

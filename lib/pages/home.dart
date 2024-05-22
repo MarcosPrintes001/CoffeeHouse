@@ -1,7 +1,6 @@
 import 'package:coffee_house/components/bottom_nav_bar.dart';
 import 'package:coffee_house/pages/cart.dart';
 import 'package:coffee_house/pages/shop.dart';
-import 'package:coffee_house/utils/constans.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -65,7 +64,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      backgroundColor: backGroundColor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.brown,
       ),
