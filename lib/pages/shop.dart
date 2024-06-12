@@ -49,7 +49,6 @@ class _ShopPageState extends State<ShopPage> {
                   itemCount: coffeeList.length +
                       (coffeeList.length ~/ 2), // Adjust for headers
                   itemBuilder: (context, index) {
-                    
                     if (index % 3 == 0) {
                       // Return header
                       return Padding(

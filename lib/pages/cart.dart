@@ -49,7 +49,7 @@ class _CartPageState extends State<CartPage> {
               Image(
                 image: ResizeImage(
                   AssetImage(
-                    ('assets/banners/coffee-shop.png'),
+                    ('assets/coffees/coffee-shop.png'),
                   ),
                   height: 30,
                   width: 30,
@@ -121,10 +121,14 @@ class _CartPageState extends State<CartPage> {
                     Coffee eachCoffee = value.userCart[index];
 
                     //return coffee tile
-                    return CoffeeTile(
-                      coffee: eachCoffee,
-                      onPressed: () => removeFromCart(eachCoffee),
-                      icon: const Icon(Icons.delete),
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: CoffeeTile(
+                        
+                        coffee: eachCoffee,
+                        onPressed: () => removeFromCart(eachCoffee),
+                        icon: const Icon(Icons.delete),
+                      ),
                     );
                   },
                 ),
